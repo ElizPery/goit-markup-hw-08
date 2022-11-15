@@ -1,0 +1,64 @@
+.form-person-info {
+    margin-left: 40px;
+    margin-right: 40px;
+
+    &__input-group {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    &__input-part {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        color: var(--primary-text-color);
+        letter-spacing: 0.01em;
+        padding-bottom: 4px;
+    }
+
+    &__input {
+        padding-left: 42px;
+        width: 100%;
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__input&__input-comment {
+        height: 120px;
+        resize: none;
+        padding: 12px 16px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+
+        &::placeholder {
+            color: rgba(117, 117, 117, 0.5);
+        }
+    }
+
+    &__input:focus+&__icon {
+        fill: var(--accent-color);
+    }
+}

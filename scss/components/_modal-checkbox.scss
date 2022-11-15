@@ -1,0 +1,51 @@
+.secure-conditions {
+    margin-top: 20px;
+    padding-left: 12px;
+
+    &__label {
+        display: flex;
+        align-items: center;
+
+        &--accent {
+            color: var(--accent-color);
+            text-decoration: underline;
+            margin-left: 4px;
+        }
+    }
+
+    &__main-text {
+        font-weight: 400;
+        line-height: 1.71;
+        color: var(--primary-text-color);
+        margin-left: 8px;
+    }
+
+    &__checkbox {
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+    }
+
+    &__custom-checkbox {
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        border: 2px solid #212121;
+        border-radius: 4px;
+    }
+
+    &__checkbox:checked+&__custom-checkbox {
+        background-image: url(../images/check.svg);
+        background-size: contain;
+        background-origin: border-box;
+        border-color: transparent;
+        background-color: var(--accent-color);
+    }
+}

@@ -1,0 +1,11 @@
+.clients {
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list>.client+.client {
+        margin-left: 30px;
+    }
+
+}
