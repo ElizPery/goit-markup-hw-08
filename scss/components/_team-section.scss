@@ -1,7 +1,10 @@
 .team {
     background-color: var(--third-bgr);
 
-    &__list {
-        display: flex;
+    &__list{
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 }
