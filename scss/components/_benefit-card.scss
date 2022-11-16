@@ -1,10 +1,6 @@
+
 .benefit-card {
-    width: calc((100% - 90px)/4);
-
-    &:not(:last-of-type) {
-        margin-right: 30px;
-    }
-
+    
     &__visual {
         display: flex;
         background-color: var(--third-bgr);
@@ -27,6 +23,10 @@
         font-size: 14px;
         line-height: 1.14;
         text-transform: uppercase;
+
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
     }
 
     &__descr {
@@ -36,4 +36,33 @@
         line-height: 1.71;
     }
 
+    &:not(:last-of-type) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-right: 30px;
+        }
+    }
+
+    &:nth-child(odd) {
+        @media screen and (min-width: 768px) {
+            margin-right: 30px;
+        }
+    }
+
+    &:nth-child(-n + 2) {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px)/2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 90px)/4);
+    }
 }

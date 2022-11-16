@@ -1,6 +1,5 @@
 .secure-conditions {
     margin-top: 20px;
-    padding-left: 12px;
 
     &__label {
         display: flex;
@@ -10,14 +9,42 @@
             color: var(--accent-color);
             text-decoration: underline;
             margin-left: 4px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.17;
+
+            @media screen and (max-width: 1199px) {
+                max-width: 450px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                font-size: 14px;
+                line-height: 1.71;
+            }
+
+            @media screen and (max-width: 440px) {
+                font-size: 10px;
+                line-height: 1.71;
+            }
         }
     }
 
     &__main-text {
         font-weight: 400;
-        line-height: 1.71;
+        font-size: 12px;
+        line-height: 1.17;
         color: var(--primary-text-color);
         margin-left: 8px;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+            line-height: 1.71;
+        }
+
+        @media screen and (max-width: 440px) {
+            font-size: 10px;
+            line-height: 1.71;
+        }
     }
 
     &__checkbox {
@@ -47,5 +74,9 @@
         background-origin: border-box;
         border-color: transparent;
         background-color: var(--accent-color);
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-left: 12px;
     }
 }

@@ -1,11 +1,10 @@
 .clients {
     &__list {
-        display: flex;
-        justify-content: center;
-    }
 
-    &__list>.client+.client {
-        margin-left: 30px;
+        @media screen and (min-width: 480px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
-
 }
