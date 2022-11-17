@@ -8,6 +8,10 @@ body {
     &.modal-open {
         overflow: hidden;
     }
+
+    & .mobile-menu.is-open {
+        overflow: hidden;
+    }
 }
 
 .style-list {

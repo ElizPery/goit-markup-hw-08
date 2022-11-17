@@ -7,10 +7,11 @@
     height: 100%;
     background-color: var(--primary-white-color);
     padding: 48px 83px 48px 40px;
-    overflow-y: scroll;
 
     &.is-open {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__item-nav + &__item-nav {
@@ -42,10 +43,6 @@
             font-size: 30px;
             line-height: 1.175;
         }
-    }
-
-    &__contacts {
-        margin-top: 302px;
     }
 
     &__item-email {
